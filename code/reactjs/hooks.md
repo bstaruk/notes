@@ -8,7 +8,7 @@
 useEffect(
   () =>
     function dismount() {
-      # do something on dismount
+      /* do something on dismount */
     },
   [],
 );
@@ -18,6 +18,23 @@ useEffect(
 
 ```js
 useEffect(() => {
-  # do something on first mount
+  /* do something on first mount */
 }, []);
+```
+
+### on first mount, and when a specific prop changes
+
+```js
+useEffect(() => {
+  /* do something on first mount, and when exampleProp changes */
+}, [exampleProp]);
+```
+
+
+### every time the component re-renders
+
+```js
+useEffect(() => {
+  /* do something on every re-render */
+});
 ```
