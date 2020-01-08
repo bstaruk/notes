@@ -1,6 +1,6 @@
 # basic react hooks templates
 
-## useEffect
+### useEffect
 
 ### on dismount
 
@@ -14,7 +14,7 @@ useEffect(
 );
 ```
 
-### on first mount
+#### on first mount
 
 ```js
 useEffect(() => {
@@ -22,7 +22,7 @@ useEffect(() => {
 }, []);
 ```
 
-### on first mount, and when a specific prop changes
+#### on first mount, and when a specific prop changes
 
 ```js
 useEffect(() => {
@@ -31,7 +31,7 @@ useEffect(() => {
 ```
 
 
-### every time the component re-renders
+#### every time the component re-renders
 
 ```js
 useEffect(() => {
