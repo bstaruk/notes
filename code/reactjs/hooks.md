@@ -40,3 +40,15 @@ useEffect(() => {
   /* do something on every re-render */
 });
 ```
+
+---
+
+### useState
+
+https://reactjs.org/docs/hooks-state.html
+
+#### basic state variable & setter
+
+```js
+const [success, setSuccess] = useState(false);
+```
