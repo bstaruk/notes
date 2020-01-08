@@ -1,7 +1,7 @@
 # basic react hooks templates
 
-* [#useeffect](useEffect)
-* [#usestate](useState)
+* [useEffect](#useeffect)
+* [useState](#usestate)
 
 ### useEffect
 
