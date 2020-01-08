@@ -2,6 +2,8 @@
 
 ### useEffect
 
+https://reactjs.org/docs/hooks-effect.html
+
 #### on dismount
 
 ```js
