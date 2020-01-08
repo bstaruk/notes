@@ -7,7 +7,7 @@
 
 https://reactjs.org/docs/hooks-effect.html
 
-#### on dismount
+#### on dismount (like componentWillUnmount)
 
 ```js
 useEffect(
@@ -19,7 +19,7 @@ useEffect(
 );
 ```
 
-#### on first mount
+#### on first mount (like componentDidMount)
 
 ```js
 useEffect(() => {
@@ -36,7 +36,7 @@ useEffect(() => {
 ```
 
 
-#### every time the component re-renders
+#### every time the component re-renders (like componentDidUpdate)
 
 ```js
 useEffect(() => {
