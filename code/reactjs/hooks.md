@@ -1,6 +1,8 @@
 # basic react hooks templates
 
-### [useEffect](https://reactjs.org/docs/hooks-effect.html)
+### useEffect
+
+https://reactjs.org/docs/hooks-effect.html
 
 #### on dismount
 
