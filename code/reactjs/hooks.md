@@ -1,5 +1,8 @@
 # basic react hooks templates
 
+* [#useeffect](useEffect)
+* [#usestate](useState)
+
 ### useEffect
 
 https://reactjs.org/docs/hooks-effect.html
