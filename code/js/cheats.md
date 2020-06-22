@@ -24,6 +24,24 @@ const haystack = [{
 console.log(haystack.filter((o) => o.id === needleId));
 ```
 
+### find the highest amount in array of objects
+```js
+const haystack = [{
+  id: 1,
+  amount: 100
+}, {
+  id: 2,
+  amount: 200
+}];
+
+// logs: [{ id: 2, amount: 200 }]
+console.log(
+  haystack
+    .map(o => o.amount)
+    .reduce((a, b) => a > b ? a : b, 0);
+);
+```
+
 ### .contains
 ```js
 const firstHaystack = document.querySelector('.haystack');
