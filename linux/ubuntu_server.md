@@ -5,7 +5,7 @@ some basic setup commands & configs that i use for new ubuntu web servers.
 * [nginx](#nginx)
 * [nvm](#nvm)
 
-### change ssh port:
+### change ssh port (and disable root login later):
 ```bash
 nano /etc/ssh/sshd_config
 service sshd restart
@@ -180,4 +180,21 @@ bash install_nvm.sh
 nvm ls-remote
 nvm install 6.9.4
 nvm use 6.9.4
+```
+
+---
+
+## github ssh
+
+`ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+`eval "$(ssh-agent -s)"`
+
+`~/.ssh/config`:
+```
+Host github.com
+  User git
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile /home/user/.ssh/id_rsa
 ```
