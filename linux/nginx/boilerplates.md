@@ -57,3 +57,45 @@ server {
   }
 }
 ```
+
+## production HTTPS static website
+
+```
+server {
+  listen 80;
+  listen [::]:80;
+  server_name www.example.com;
+
+  listen 443 ssl;
+  ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+
+  return 301 https://example.com;
+}
+
+server {
+  listen 80;
+  listen [::]:80;
+
+  root /var/www/example.com/public;
+
+  index index.html index.htm;
+
+  server_name example.com;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+
+  listen 443 ssl;
+  ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+
+
+  if ($scheme != "https") {
+    return 301 https://$host$request_uri;
+  }
+}
+```
